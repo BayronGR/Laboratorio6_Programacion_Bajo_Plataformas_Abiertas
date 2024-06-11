@@ -68,3 +68,22 @@ int peek(Stack* stack) {
 int isEmpty(Stack* stack) {
     return stack->top == NULL;
 }
+
+// Función para imprimir la pila
+void printStack(Stack* stack) {
+    Node* current = stack->top;
+    printf("Estado actual de la pila: ");
+    while (current != NULL) {
+        printf("%d ", current->data);
+        current = current->next;
+    }
+    printf("\n");
+}
+
+// Función para liberar la memoria de la pila
+void freeStack(Stack* stack) {
+    while (!isEmpty(stack)) {
+        pop(stack);
+    }
+    free(stack);
+}
