@@ -10,3 +10,14 @@ typedef struct Node {
 typedef struct Stack {
     Node* top;
 } Stack;
+
+// Funciones de la pila
+Stack* createStack();
+void push(Stack* stack, int data);
+int pop(Stack* stack);
+int peek(Stack* stack);
+int isEmpty(Stack* stack);
+void printStack(Stack* stack);
+void freeStack(Stack* stack);
+
+#endif
